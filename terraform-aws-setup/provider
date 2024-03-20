@@ -1,0 +1,8 @@
+provider "aws" {
+  region  = var.region
+  profile = var.aws_credentials_profile
+}
+
+provider "ciscomcd" {
+  api_key_file = file(var.ciscomcd_api_key_file)
+}

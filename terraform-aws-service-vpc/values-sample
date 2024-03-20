@@ -1,0 +1,5 @@
+zones = ["us-east-1b", "us-east-1c"]
+prefix = "MulticloudDefense_svpc"
+vpc_cidr = "172.16.0.0/16"
+vpc_subnet_bits = 8
+region = "us-east-1"

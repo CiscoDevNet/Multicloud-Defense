@@ -1,0 +1,58 @@
+locals {
+  lb_listener_ports = [80, 443]
+  target_ports      = [80, 443]
+  // attach vm from each zone to the target port, so make a list of
+  // zone index and the target port
+  // for the above target_ports and 2 zones, the eventual values would be
+  // [ {port:80, zone:az1} {port:80, zone:az2} {port:443, zone:az1} {port:443, zone:az2} ]
+  // zone and port values are indexes in reality
+  target_port_zones = flatten([
+    for tgt_port_idx, tgt_port in local.target_ports : [
+      for zone_idx, zone in var.zones : {
+        tgt_port_idx = tgt_port_idx
+        zone_idx     = zone_idx
+      }
+    ]
+  ])
+}
+
+resource "aws_lb" "lb" {
+  name                       = "${var.prefix}-lb"
+  internal                   = true
+  load_balancer_type         = "network"
+  subnets                    = aws_subnet.subnet.*.id
+  enable_deletion_protection = false
+  tags = {
+    Name   = "${var.prefix}-lb"
+    prefix = var.prefix
+  }
+}
+
+resource "aws_lb_target_group" "lb_target_group" {
+  count    = length(local.target_ports)
+  name     = "${var.prefix}-tgt-${local.target_ports[count.index]}"
+  port     = local.target_ports[count.index]
+  protocol = "TCP"
+  vpc_id   = aws_vpc.vpc.id
+}
+
+resource "aws_lb_target_group_attachment" "lb_target_group_attachment" {
+  # convert the list to dict for easy access for the values
+  # [obj_a, obj_b, obj_c] is converted to
+  # {0: obj_a, 1: obj_b, 2, obj_c}
+  for_each         = { for idx, obj in local.target_port_zones : idx => obj }
+  target_group_arn = aws_lb_target_group.lb_target_group[each.value.tgt_port_idx].arn
+  port             = local.target_ports[each.value.tgt_port_idx]
+  target_id        = aws_instance.vm[each.value.zone_idx].id
+}
+
+resource "aws_lb_listener" "lb_listener" {
+  count             = length(local.lb_listener_ports)
+  load_balancer_arn = aws_lb.lb.arn
+  port              = local.lb_listener_ports[count.index]
+  protocol          = "TCP"
+  default_action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.lb_target_group[count.index].arn
+  }
+}
