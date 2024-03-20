@@ -1,0 +1,6 @@
+# uses the credentials on your system, change this accoriding to the requirements
+# To create default application login: gcloud auth application-default login
+# You can use service account too, check terraform documentation for details
+provider "google" {
+  project = var.project_id
+}

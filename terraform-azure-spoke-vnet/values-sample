@@ -1,0 +1,9 @@
+prefix = "kiran-app"
+location = "eastus"
+zones = ["1"]
+vnet_cidr = "10.0.0.0/16"
+subnet_bits = 8
+ssh_public_key_file = "sample.pub"
+instance_size = "Standard_B1s"
+vm_count_per_zone = 1
+external_ips = []

@@ -1,0 +1,5 @@
+prefix = "MulticloudDefense"
+project_id = "project-id-12345"
+region = "us-east1"
+mgmt_cidr = "172.16.0.0/24"
+datapath_cidr = "172.16.1.0/24"

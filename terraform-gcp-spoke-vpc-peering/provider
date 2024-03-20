@@ -1,0 +1,5 @@
+provider "google" {
+  project       = var.project_id
+  # set up additional credentials here
+  # credentials = "file_name.json"
+}

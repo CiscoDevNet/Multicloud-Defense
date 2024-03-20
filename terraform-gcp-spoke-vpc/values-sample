@@ -1,0 +1,8 @@
+prefix = "kiran-app"
+region = "us-east1"
+zones = ["us-east1-b"]
+subnet_cidr = "10.0.0.0/24"
+external_ips = []
+instance_type = "e2-medium"
+vm_count_per_zone = 1
+project_id = ""

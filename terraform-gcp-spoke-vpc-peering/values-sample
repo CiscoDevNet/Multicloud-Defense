@@ -1,0 +1,4 @@
+project_id = "project-id-12345"
+MulticloudDefense_egress_gw_endpoint = "172.16.1.2"
+MulticloudDefense_service_vpc_id = "service_vpc_self_link"
+spoke_vpc_id = "spoke_vpc_self_link"

@@ -1,0 +1,6 @@
+prefix = "MulticloudDefense"
+project_id = "project-id-12345"
+gcp_credentials_file = "~/.config/gcloud/application_default_credentials.json"
+disable_api_services_on_destroy = false
+bucket_location = ""
+MulticloudDefense_webhook = ""

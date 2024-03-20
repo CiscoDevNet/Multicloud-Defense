@@ -1,0 +1,4 @@
+provider "google" {
+  project     = var.project_id
+  credentials = pathexpand(var.gcp_credentials_file)
+}
