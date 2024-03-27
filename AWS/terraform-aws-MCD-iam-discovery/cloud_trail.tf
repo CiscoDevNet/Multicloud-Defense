@@ -1,4 +1,4 @@
-resource "aws_cloudtrail" "valti_cloudtrail" {
+resource "aws_cloudtrail" "mcd_cloudtrail" {
   name                          = "${var.prefix}-cloudtrail"
   s3_bucket_name                = aws_s3_bucket.ciscomcd_s3_bucket.id
   enable_log_file_validation    = true
@@ -8,10 +8,8 @@ resource "aws_cloudtrail" "valti_cloudtrail" {
   depends_on = [
     aws_s3_bucket_policy.ciscomcd_s3_bucket_policy
   ]
-
   tags = {
     Name   = "${var.prefix}-cloudtrail"
     prefix = var.prefix
   }
-
 }

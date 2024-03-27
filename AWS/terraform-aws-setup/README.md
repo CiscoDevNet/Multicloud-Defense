@@ -1,9 +1,9 @@
 # Setup AWS Account IAM Roles, Add Account to the Multicloud-Defense Contoller
-Create IAM roles and prepare your AWS account to enable Multicloud-Defense Controller access your account and deploy Multicloud-Defense Security Gateways.
+Create IAM roles and prepare your AWS account to enable Multicloud Defense Controller access your account and deploy Multicloud Defense Security Gateways.
 
 # Requirements
 1. Enable terraform to access your aws account. Check here for the options https://registry.terraform.io/providers/hashicorp/aws/latest/docs.
-1. Login to the Multicloud-Defense Dashboard and generate an API Key using the instructions provided here: https://registry.terraform.io/providers/Multicloud-Defense-security/Multicloud-Defense/latest/docs
+1. Login to the Multicloud Defense Dashboard and generate an API Key using the instructions provided here: https://registry.terraform.io/providers/Multicloud-Defense-security/Multicloud-Defense/latest/docs
 
 ## Argument Reference
 
