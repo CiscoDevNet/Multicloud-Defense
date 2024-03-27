@@ -40,5 +40,4 @@ resource "aws_iam_role_policy" "ciscomcd_cloudwatch_event_policy" {
   ]
 }
 EOF
-
 }

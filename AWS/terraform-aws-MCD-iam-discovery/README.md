@@ -1,10 +1,10 @@
-# terraform-aws-Multicloud-Defense-iam
-This module creates IAM roles required to deploy Multicloud-Defense gateways
+# terraform-aws-Multicloud-Defense-iam-discovery
+This module creates IAM roles required for discovery only for use with Multicloud Defense Gateways
 
 ## Example Usage
 ```hcl
 module "iam" {
-  source                        = "github.com/Multicloud-Defense-security/terraform-aws-Multicloud-Defense-iam"
+  source                        = "github.com/Multicloud-Defense-security/terraform-aws-Multicloud-Defense-iam-discovery"
   prefix                        = "customer"
   controller_aws_account_number = "12345689012"
   ExternalId                    = "abcdeefghijklmnopqrstuvwxyztlostdkgzmypjegodwrfoahmsasffzoinrabcd"

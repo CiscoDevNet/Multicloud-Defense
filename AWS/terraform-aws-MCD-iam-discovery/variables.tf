@@ -7,7 +7,7 @@ variable "controller_aws_account_number" {
 }
 
 variable "ExternalId" {
-  description = "this is the External ID shown on the Add AWS Account on ciscomcd UI"
+  description = "this is the External ID shown on the Add AWS Account on mcd UI"
   default     = "ciscomcd"
 }
 
