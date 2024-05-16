@@ -4,7 +4,7 @@ terraform {
       source = "hashicorp/aws"
     }
     ciscomcd = {
-      source = "ciscomcd-security/ciscomcd"
+      source = "CiscoDevNet/ciscomcd"
     }
     time = {
       source = "hashicorp/time"
