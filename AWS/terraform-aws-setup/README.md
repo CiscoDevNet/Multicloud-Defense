@@ -65,8 +65,8 @@ Create IAM roles and prepare your AWS account to enable Multicloud Defense Contr
 
 ## Running as root module
 ```
-git clone https://github.com/Multicloud-Defense-security/terraform-aws-setup.git
-cd terraform-aws-setup
+git clone https://github.com/CiscoDevNet/Multicloud-Defense.git
+cd AWS/terraform-aws-setup
 mv provider provider.tf
 cp values-sample values
 ```
@@ -104,7 +104,7 @@ provider "Multicloud-Defense" {
 }
 
 module "csp_setup" {
-  source                        = "github.com/Multicloud-Defense-security/terraform-aws-setup"
+  source                        = "github.com/CiscoDevNet/Multicloud-Defense/AWS/terraform-aws-setup"
   # define the values for all the variables (use values-sample as a reference)
   deployment_name               = "prod1"
   prefix                        = "Multicloud-Defense"
