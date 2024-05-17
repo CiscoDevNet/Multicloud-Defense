@@ -104,7 +104,7 @@ provider "Multicloud-Defense" {
 }
 
 module "csp_setup" {
-  source                        = "github.com/Multicloud-Defense-security/terraform-aws-setup"
+  source                        = "github.com/CiscoDevNet/Multicloud-Defense/AWS/terraform-aws-setup"
   # define the values for all the variables (use values-sample as a reference)
   deployment_name               = "prod1"
   prefix                        = "Multicloud-Defense"
