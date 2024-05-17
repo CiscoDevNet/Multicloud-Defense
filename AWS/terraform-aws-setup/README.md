@@ -68,7 +68,7 @@ Create IAM roles and prepare your AWS account to enable Multicloud Defense Contr
 git clone https://github.com/Multicloud-Defense-security/terraform-aws-setup.git
 cd terraform-aws-setup
 mv provider provider.tf
-cp values.sample values
+cp values-sample values
 ```
 
 Edit `values` file with the appropriate values for the variables
