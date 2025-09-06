@@ -106,8 +106,8 @@ Create a Multicloud-Defense Service VPC to deploy Multicloud-Defense Gateway.
 ## Run as root module
 
 ```
-git clone https://github.com/Multicloud-Defense-security/terraform-aws-service-vpc.git
-cd terraform-aws-service-vpc
+git clone https://github.com/CiscoDevNet/Multicloud-Defense.git
+cd AWS/terraform-aws-service-vpc
 cp provider provider.tf
 cp values-sample values
 ```
