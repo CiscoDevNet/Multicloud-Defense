@@ -64,8 +64,8 @@
 ## Running as a root module
 
 ```
-git clone https://github.com/maskiran/terraform-aws-app-vpc.git
-cd terraform-aws-app-vpc
+git clone https://github.com/CiscoDevNet/Multicloud-Defense.git
+cd AWS/terraform-aws-spoke-vpc
 mv provider provider.tf
 cp values-sample values
 ```
