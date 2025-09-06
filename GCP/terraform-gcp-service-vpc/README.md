@@ -31,8 +31,8 @@ Create a Multicloud-Defense Service VPC using the GCP Terraform Provider. This m
 ## Run as root module
 
 ```
-git clone https://github.com/Multicloud-Defense-security/terraform-gcp-service-vpc.git
-cd terraform-gcp-service-vpc
+git clone https://github.com/CiscoDevNet/Multicloud-Defense.git
+cd GCP/terraform-gcp-service-vpc
 mv provider provider.tf
 cp values-sample values
 ```
