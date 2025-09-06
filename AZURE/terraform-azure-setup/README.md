@@ -22,8 +22,8 @@ Create Azure AD App that is used by the Multicloud-Defense Controller to manage 
 
 ## Running as root module
 ```
-git clone https://github.com/Multicloud-Defense-security/terraform-azure-setup.git
-cd terraform-azure-setup
+git clone https://github.com/CiscoDevNet/Multicloud-Defense.git
+cd AZURE/terraform-azure-setup
 mv provider provider.tf
 cp values.sample values
 ```
@@ -64,7 +64,7 @@ provider "azurerm" {
 }
 
 module "csp_setup" {
-  source                  = "github.com/Multicloud-Defense-security/terraform-azure-setup"
+  source                  = "github.com/CiscoDevnet/Multicloud-Defense/AZURE/terraform-azure-setup"
   prefix                  = "Multicloud-Defense"
   subscription_guids_list = []
 }
