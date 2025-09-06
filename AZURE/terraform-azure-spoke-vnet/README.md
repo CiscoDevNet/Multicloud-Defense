@@ -57,8 +57,8 @@
 ## Running as a root module
 
 ```
-git clone https://github.com/maskiran/terraform-azure-app-vnet.git
-cd terraform-azure-app-vnet
+git clone https://github.com/CiscoDevNet/Multicloud-Defense.git
+cd AZURE/terraform-azure-spoke-vnet
 mv provider provider.tf
 cp values-sample values
 ```
