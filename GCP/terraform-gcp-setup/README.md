@@ -33,8 +33,8 @@ Create Service Accounts, enable API Services and prepare your GCP account to ena
 
 ## Running as root module
 ```
-git clone https://github.com/Multicloud-Defense-security/terraform-gcp-setup.git
-cd terraform-gcp-setup
+git clone https://github.com/CiscoDevNet/Multicloud-Defense.git
+cd GCP/terraform-gcp-setup
 mv provider provider.tf
 cp values.sample values
 ```
