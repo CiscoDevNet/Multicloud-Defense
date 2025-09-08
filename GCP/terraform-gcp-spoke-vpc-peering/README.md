@@ -10,8 +10,8 @@ Setup VPC peering between Multicloud-Defense Service VPC (Datapatah VPC) and the
 
 ## Running as root module
 ```
-git clone https://github.com/Multicloud-Defense-security/terraform-gcp-spoke-vpc.git
-cd terraform-gcp-spoke-vpc
+git clone https://github.com/CiscoDevNet/Multicloud-Defense.git
+cd GCP/terraform-gcp-spoke-vpc-peering
 mv provider provider.tf
 cp values.sample values
 ```
